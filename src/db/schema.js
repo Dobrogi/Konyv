@@ -6,7 +6,8 @@ const users = mysqlTable("users", {
   name: varchar("name", { length: 255 }),
   email: varchar("email", { length: 255 }).notNull().unique(),
 });
-const users = mysqlTable("books", {
+
+const books = mysqlTable("books", {
   id: int("id").primaryKey().autoincrement(),
   title: varchar("title", { length: 255 }).notNull(),
   author: varchar("author", { length: 255 }).notNull(),
